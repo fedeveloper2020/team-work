@@ -10,7 +10,7 @@
 @import './helpers/visually-hidden.scss';
 
 @import 'base.scss';
-@import './components/container.scss'; 
+@import './components/container.scss';
 
 // Замість коментарів підключаємо свої секції
 // Хедер - Соколов
@@ -22,4 +22,4 @@
 @import './sections/guarantees.scss';
 // Секция - Слайдер - Онисько
 @import './sections/registration.scss';
-// футер - Юрьев
+@import './sections/footer.scss';
