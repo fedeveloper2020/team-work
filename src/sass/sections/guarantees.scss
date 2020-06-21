@@ -1,0 +1,115 @@
+// Секция - Мы гарантируем - Осадчий
+.general-section-title {
+  font-size: 20px;
+  color: $dark-bg-color;
+  font-weight: 800;
+  line-height: 3.127;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+
+  @media (min-width: 768px) {
+    font-size: 26px;
+    line-height: 2.405;
+    letter-spacing: 1.3px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 42px;
+    line-height: 1.489;
+    letter-spacing: 2.1px;
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: 1680px) {
+    font-size: 46px;
+    line-height: 1.365;
+    letter-spacing: 2.3px;
+    margin-bottom: 44px;
+  }  
+}
+
+.guarantees {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: 768px) {
+    padding-top: 54px;
+    padding-bottom: 58px;
+  }
+
+  &__list {
+    padding: 26px 0px 26px 34px;
+    letter-spacing: 0.55px;
+  
+    @media (min-width: 768px) {
+      background-color: $bg-guarantees-color;
+      padding: 36px 50px 30px 98px;
+    }
+
+    @media (min-width: 1280px) {
+      padding: 50px 134px 44px 172px;
+    }
+
+    @media (min-width: 1680px) {
+      padding: 65px 138px 58px 148px;
+    }
+
+    &-wrapper {
+      @media (max-width: 767px) {
+        background-color: $bg-guarantees-color;
+      }
+    }
+  }
+
+  &__item {
+    color: $light-dark-color;
+    line-height: 1.818;
+    font-weight: 500;
+    letter-spacing: 0.55px;
+    position: relative;
+
+    @media (min-width: 1280px) {
+      font-size: 18px;
+      line-height: 1.62;
+      letter-spacing: 0.9px;
+    }
+
+    @media (min-width: 1680px) {
+      font-size: 21px;
+      line-height: 1.4;
+      letter-spacing: 1.05px;
+    }
+  
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &--highlight {
+      color: $primary-color;
+    }
+  
+    &::before {
+      @extend %pseudo;
+      width: 24px;
+      height: 24px;
+      background-image: url(../images/guarantees/noun_Campfire_2425646.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      left: -37px;
+      z-index: 1;
+    }
+
+    &:not(:last-child)::after {
+      @extend %pseudo;
+      width: 2px;
+      height: 120%;
+      border-width: 1px;
+      border-color: $light-gray-color;
+      border-style: dotted;
+      top: 15px;
+      left: -26px;
+    }
+  }
+}
