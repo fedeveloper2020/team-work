@@ -14,12 +14,12 @@
 
 // Замість коментарів підключаємо свої секції
 // Хедер - Соколов
-// Секция - Главные проблемы - Таран
-// Секция - Как мы это делаем - Кожемяченко
+@import './sections/problems.scss';
+@import './sections/how.scss';
 // Секция - Наша программа - Юрьев
-// Секция - Почему нас выбирают - Таран
-@import './sections/teacher.scss';
+// @import './sections/why.scss';
+// Секция - Преподаватель - Путря
 @import './sections/guarantees.scss';
-// Секция - Слайдер - Онисько
+@import './sections/feedback.scss';
 @import './sections/registration.scss';
-@import './sections/footer.scss';
+// футер - Юрьев

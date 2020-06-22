@@ -1,0 +1,157 @@
+.problems {
+  @include position(relative);
+  padding-top: 50px;
+  padding-bottom: 24px;
+
+  @media (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 36px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 78px;
+    padding-bottom: 48px;
+  }
+  @media (min-width: 1680px) {
+    padding-top: 116px;
+    padding-bottom: 70px;
+  }
+  &::before {
+    content: '';
+    @include position(absolute, $top: 0);
+    z-index: 1;
+    width: 100%;
+    height: 518px;
+    background-color: $dark-bg-color;
+
+    @media (min-width: 768px) {
+      height: 332px;
+      @include background(
+        '../images/problems/fire.png',
+        $position: right bottom,
+        $size: 210px 313px
+      );
+    }
+
+    @media (min-width: 1280px) {
+      height: 524px;
+      @include background(
+        '../images/problems/fire-1280.png',
+        $position: right bottom,
+        $size: 356px 534px
+      );
+    }
+
+    @media (min-width: 1680px) {
+      height: 560px;
+      @include background(
+        '../images/problems/fire-1680.png',
+        $position: right bottom,
+        $size: 392px 584px
+      );
+    }
+  }
+
+  &__wraper {
+    @include position(relative);
+    z-index: 2;
+  }
+}
+
+.problems__title {
+  font-size: 20px;
+  margin: 0 0 18px;
+  color: $white-color;
+
+  &-span {
+    color: $primary-color;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 450px;
+    font-size: 26px;
+    margin: 0 0 24px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 730px;
+    font-size: 42px;
+    margin: 0 0 50px;
+  }
+
+  @media (min-width: 1680px) {
+    max-width: 800px;
+    font-size: 46px;
+    margin: 0 0 66px;
+  }
+}
+
+.counter-list {
+  background-color: $white-color;
+  padding: 18px 34px 30px 30px;
+  box-shadow: 4px 7px 16px 5px $shadow-first-color;
+  counter-reset: problem;
+
+  @media (min-width: 768px) {
+    @include flex(space-between);
+    padding: 38px 74px 40px 102px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 54px 106px 50px 100px;
+  }
+
+  @media (min-width: 1680px) {
+    padding: 70px 90px 76px 100px;
+  }
+}
+
+.counter-list__item {
+  @include font(13px, 700, 20px);
+  color: $light-dark-color;
+  counter-increment: problem;
+  position: relative;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    display: block;
+    content: '0' counter(problem);
+    margin-left: 34px;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+
+  &::after {
+    @extend %line;
+    @include position(absolute, $top: 6px, $left: 0);
+  }
+
+  @media (min-width: 768px) {
+    flex-basis: 40%;
+
+    &:not(:nth-last-of-type(-n + 2)) {
+      margin-bottom: 22px;
+    }
+
+    &:nth-child(2n + 1) {
+      flex-basis: 40%;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 18px;
+    flex-basis: 26%;
+
+    &:not(:nth-last-of-type(-n + 3)) {
+      margin-bottom: 44px;
+    }
+
+    &:nth-child(2n + 1) {
+      flex-basis: 26%;
+    }
+  }
+}
