@@ -1,0 +1,194 @@
+.section-black-title {
+  font-size: 20px;
+  color: $dark-bg-color;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-bottom: 26px;
+
+  @media (min-width: 768px) {
+    font-size: 26px;
+    line-height: 2.405;
+    letter-spacing: 1.3px;
+  }
+  
+  @media (min-width: 1280px) {
+    font-size: 42px;
+    line-height: 1.489;
+    letter-spacing: 2.1px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: 1680px) {
+    font-size: 46px;
+    line-height: 1.365;
+    letter-spacing: 2.3px;
+    margin-bottom: 72px;
+  }
+}
+
+.teacher {
+  padding-top: 244px;
+  padding-bottom: 10px;
+  
+  &__wraper {
+    display: flex;
+    flex-wrap: wrap;
+    
+    @media (min-width: 768px) {
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
+  }
+
+  &__photo {
+    background-color: $primary-color;
+    display: inline-flex;
+    margin-bottom: 20px;
+  }
+
+  &__about-wraper {
+    @media (min-width: 768px) {
+      padding-left: 44px;
+    }
+  
+    @media (min-width: 1280px) {
+      padding-left: 86px;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    color: $dark-bg-color;
+    font-weight: 800;
+    line-height: 1.823;
+    letter-spacing: 0.8px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: 1.4px;
+    }
+  }
+
+  &__attainment {
+    margin-bottom: 20px;
+    border-top: 1px solid $gray-color;
+    padding-top: 26px;
+    padding-left: 38px;
+
+    @media (min-width: 1280px) {
+      padding-right: 134px;
+    }
+
+    @media (min-width: 1680px) {
+      padding-right: 264px;
+      margin-bottom: 30px;
+    }
+
+    &-item {
+      font-size: 13px;
+      color: $dark-bg-color;;
+      font-weight: 600;
+      letter-spacing: 0.65px;
+      position: relative;
+      line-height: 1.6;
+
+      @media (min-width: 1280px) {
+        font-size: 16px;
+        line-height: 1.75;
+        letter-spacing: 0.8px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &::before {
+        @extend %pseudo;
+        width: 40px;
+        height: 32px;
+        background-image: url(../images/teacher/noun_Check_2422424.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        left: -48px;
+        top: -2px;
+      
+        @media (min-width: 1280px) {
+          left: -42px;
+        }
+      }
+    }
+  }
+
+  &__qualification {
+    color: $gray-color;
+    font-weight: 500;
+    line-height: 1.818;
+    letter-spacing: 0.55px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    
+    @media (min-width: 768px) {
+      padding-left: 0px;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 16px;
+      line-height: 1.75;
+      letter-spacing: 0.8px;
+      padding-right: 30px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: $primary-color;
+      margin-bottom: 18px;
+    
+      @media (min-width: 1280px) {margin-bottom: 30px;}
+      @media (min-width: 1680px) {margin-bottom: 36px;}
+    }
+
+    &--new-line {
+      display: block;
+      margin-top: 16px;
+    
+      @media (min-width: 1280px) {
+        margin-top: 22px;
+      }
+
+      @media (min-width: 1680px) {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  &__certificate {
+    color: $primary-color;
+    font-weight: 400;
+    line-height: 1.818;
+    letter-spacing: 0.55px;
+    padding-left: 16px;
+
+    @media (min-width: 768px) {
+      padding-left: 0px;
+    }
+  
+    @media (min-width: 1280px) {
+      font-size: 16px;
+      line-height: 1.75;
+      letter-spacing: 0.8px;
+    }
+  }
+}
+
