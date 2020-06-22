@@ -1,0 +1,259 @@
+.feedback {
+  padding: 30px 0 54px;
+
+  @media (min-width: 768px) {
+    padding: 35px 0 70px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 48px 0 100px;
+  }
+
+  @media (min-width: 1680px) {
+    padding: 64px 0 122px;
+  }
+
+  &__title {
+    @include font(20px, 800, 26.5px);
+    letter-spacing: 0.05em;
+    color: $dark-bg-color;
+    text-align: center;
+    margin: 0 0 20px;
+
+    @media (min-width: 768px) {
+      @include font(26px, 800, 62px);
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 42px;
+    }
+
+    @media (min-width: 1680px) {
+      font-size: 46px;
+    }
+  }
+}
+
+.hidden-word {
+  display: inline;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.slider {
+  position: relative;
+
+  @media (min-width: 1280px) {
+    padding: 0 26px 0 36px;
+  }
+
+  @media (min-width: 1680px) {
+    padding: 0 152px 0 120px;
+  }
+
+  &-left-arrow {
+    @include position(absolute, $left: 0, $bottom: 28px);
+    @extend %arrows;
+
+    @media (min-width: 768px) {
+      bottom: 228px;
+      left: -20px;
+    }
+
+    @media (min-width: 1280px) {
+      bottom: 275px;
+      left: -6px;
+    }
+
+    @media (min-width: 1680px) {
+      bottom: 280px;
+      left: 65px;
+    }
+  }
+
+  &-right-arrow {
+    @include position(absolute, $right: 0, $bottom: 28px);
+    @extend %arrows;
+
+    @media (min-width: 768px) {
+      bottom: 228px;
+      right: -20px;
+    }
+
+    @media (min-width: 1280px) {
+      bottom: 275px;
+      right: -16px;
+    }
+
+    @media (min-width: 1680px) {
+      bottom: 280px;
+      right: 95px;
+    }
+  }
+
+  &__wrapper {
+    box-shadow: 4px 7px 35px 11px $shadow-third-color;
+    padding: 20px 0 32px;
+
+    @media (min-width: 768px) {
+      @include flex($flex-wrap: nowrap);
+      padding: 44px 34px 48px 86px;
+    }
+  }
+
+  &__line {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    height: 54px;
+
+    @media (min-width: 1280px) {
+      margin-top: 38px;
+    }
+
+    @media (min-width: 1680px) {
+      margin-top: 42px;
+    }
+
+    &-elements {
+      @media (max-width: 767px) {
+        &:not(:nth-child(-n + 3)) {
+          display: none;
+        }
+
+        &:first-child,
+        &:nth-child(2) {
+          margin-right: 12px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        & img {
+          @include transition($property: border, $duration: 0.2s);
+        }
+
+        &:hover img {
+          border: 4px solid $primary-color;
+          border-radius: 50%;
+        }
+
+        &:not(:last-child) {
+          margin-right: 22px;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        &:not(:last-child) {
+          margin-right: 36px;
+        }
+      }
+    }
+  }
+}
+
+.image-wrapper {
+  text-align: center;
+
+  &__person {
+    display: block;
+    text-align: center;
+
+    @media (min-width: 320px) {
+      margin-bottom: 18px;
+    }
+
+    @media (min-width: 768px) {
+      margin: 20px 0 15px;
+    }
+
+    @media (min-width: 1280px) {
+      margin: 0 0 20px;
+    }
+  }
+}
+
+.slider-content {
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    width: 224px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    margin-left: 36px;
+
+    .slider-content__dots {
+      display: none;
+    }
+  }
+
+  &__name {
+    @include font(13px, 800, 29px);
+    letter-spacing: 0.05em;
+    color: $primary-color;
+    margin: 16px 0 4px;
+
+    @media (min-width: 768px) {
+      margin: 0 0 16px;
+      font-size: 18px;
+    }
+
+    @media (min-width: 1280px) {
+      margin: 0 0 20px;
+      font-size: 25px;
+    }
+  }
+
+  &__education {
+    @include font(11px, 500, 17px);
+    letter-spacing: 0.05em;
+    color: $light-gray-color;
+    margin: 0 0 16px;
+
+    @media (min-width: 768px) {
+      font-size: 13px;
+    }
+
+    @media (min-width: 1280px) {
+      width: 450px;
+    }
+  }
+
+  &__text {
+    @include font(11px, 500, 20px);
+    letter-spacing: 0.05em;
+    color: $light-dark-color;
+
+    @media (min-width: 1280px) {
+      font-size: 17px;
+      line-height: 29px;
+      max-width: 716px;
+    }
+  }
+
+  &__plus-text {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    color: $primary-color;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    @include font(11px, 500, 20px);
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    display: contents;
+
+    @media (min-width: 1280px) {
+      font-size: 17px;
+      line-height: 29px;
+    }
+  }
+}

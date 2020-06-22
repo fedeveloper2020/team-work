@@ -1,0 +1,188 @@
+.how {
+  padding-top: 24px;
+  padding-bottom: 54px;
+
+  @media (min-width: 768px) {
+    padding-top: 36px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 48px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: 1680px) {
+    padding-top: 70px;
+    padding-bottom: 130px;
+  }
+
+  &__title {
+    @include font(20px, 800, 1.3);
+    font-size: 20px;
+    color: $light-dark-color;
+    text-align: center;
+    letter-spacing: 0.05em;
+    // margin-bottom: 24px;
+    margin-bottom: 34px;
+
+    @media (min-width: 768px) {
+      font-size: 26px;
+      line-height: 2.4;
+      margin-bottom: 38px;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 42px;
+      line-height: 1.5;
+      text-align: left;
+      margin-bottom: 44px;
+    }
+
+    @media (min-width: 1680px) {
+      font-size: 46px;
+      margin-bottom: 54px;
+    }
+  }
+}
+
+.how-list {
+  @media (min-width: 768px) {
+    @include flex(center);
+  }
+
+  &__item {
+    box-shadow: 4px 7px 24px 8px $shadow-secondary-color;
+    text-align: center;
+    padding: 30px 28px 24px;
+    flex-basis: 280px;
+    @include transition();
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      color: $white-color;
+      background-color: $primary-color;
+
+      .how-list__item-icon {
+        fill: $white-color;
+      }
+
+      .how-list__item-title {
+        color: $white-color;
+      }
+
+      .how-list__item-title::after {
+        background-color: $white-color;
+      }
+
+      .how-list__item-description {
+        color: $white-color;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      color: $white-color;
+      background-color: $primary-color;
+
+      .how-list__item-icon {
+        fill: $white-color;
+      }
+
+      .how-list__item-title {
+        color: $white-color;
+      }
+
+      .how-list__item-title::after {
+        background-color: $white-color;
+      }
+
+      .how-list__item-description {
+        color: $white-color;
+      }
+    }
+
+    @media (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      padding: 36px 26px 24px;
+
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 22px;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 22px;
+      }
+    }
+
+    @media (min-width: 1280px) and (max-width: 1679px) {
+      flex-basis: 390px;
+      padding: 40px 36px 36px;
+
+      &:not(:nth-child(3n)) {
+        margin-right: 20px;
+      }
+
+      &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (min-width: 1680px) {
+      flex-basis: 430px;
+
+      &:not(:nth-child(3n)) {
+        margin-right: 22px;
+      }
+
+      &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 22px;
+      }
+    }
+
+    &-icon {
+      fill: $primary-color;
+      margin: 0 auto 12px;
+      width: 45px;
+      height: 55px;
+    }
+
+    &-title {
+      @include font(13px, 700, 1.5);
+      color: $dark-bg-color;
+      text-align: center;
+
+      &::after {
+        @extend %line;
+        margin: 16px auto;
+      }
+
+      @media (min-width: 1280px) {
+        font-size: 18px;
+      }
+
+      @media (min-width: 1680px) {
+        font-size: 21px;
+      }
+    }
+
+    &-description {
+      @include font(11px, 400, 1.8);
+      color: $gray-color;
+
+      @media (min-width: 1280px) {
+        font-size: 15px;
+      }
+
+      @media (min-width: 1280px) {
+        font-size: 19px;
+      }
+    }
+  }
+}

@@ -10,16 +10,16 @@
 @import './helpers/visually-hidden.scss';
 
 @import 'base.scss';
-@import './components/container.scss'; 
+@import './components/container.scss';
 
 // Замість коментарів підключаємо свої секції
 // Хедер - Соколов
-// Секция - Главные проблемы - Таран
-// Секция - Как мы это делаем - Кожемяченко
+@import './sections/problems.scss';
+@import './sections/how.scss';
 // Секция - Наша программа - Юрьев
-// Секция - Почему нас выбирают - Таран
+// @import './sections/why.scss';
 // Секция - Преподаватель - Путря
 @import './sections/guarantees.scss';
-// Секция - Слайдер - Онисько
+@import './sections/feedback.scss';
 @import './sections/registration.scss';
 // футер - Юрьев
