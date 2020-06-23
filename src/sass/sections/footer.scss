@@ -104,6 +104,10 @@
     padding-top: 48px;
   }
 
+  .contact-tel {
+    padding-left: 82px;
+  }
+
   .footer-top {
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -150,11 +154,6 @@
     transform: translateX(-46px);
   }
 }
-
-.contact-tel {
-  padding-left: 82px;
-}
-
 
 @media (min-width: 1280px) {
   .section-footer {
