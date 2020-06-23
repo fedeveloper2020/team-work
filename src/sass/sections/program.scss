@@ -19,7 +19,8 @@
   position: relative;
 
   &::before {
-    @include pseudo($display: inline-block, $content: '');
+    content: '';
+    display: inline-block;
     width: 25px;
     height: 2px;
     background-color: $primary-color;
@@ -49,7 +50,8 @@
     color: $white-color;
 
     &::before {
-      @include pseudo($display: inline-block, $content: '');
+      content: '';
+      display: inline-block;
       width: 10px;
       height: 10px;
       border-radius: 50%;
@@ -62,7 +64,8 @@
     }
 
     &--line::after {
-      @include pseudo($display: block, $content: '');
+      content: '';
+      display: block;
       width: 25px;
       height: 2px;
       background-color: $primary-color;
@@ -83,7 +86,6 @@
   background-repeat: no-repeat;
   background-size: 143px 183px;
   max-width: 100%;
-
 
   @media (min-resolution: 192dpi) {
     background-image: url(../images/program/program-mob@2x.png);
