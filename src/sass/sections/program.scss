@@ -1,55 +1,28 @@
-.container {
-  width: 280px;
-  margin: 0 auto;
-}
-
 .section-program {
   padding-top: 56px;
   min-height: 1891px;
-  background-color: rgb(17, 21, 23);
+  background-color: $dark-bg-color;
 }
-
-.section__list {
-  position: relative;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 2px;
-    height: 92%;
-    position: absolute;
-    background-color: #546264;
-    transform: translate(63px, 14px);
-  }
-}
-
 
 .section-title {
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 33px;
-  letter-spacing: 0.05em;
-  color: rgb(255, 255, 255);
+  @include font(20px, 800, 33px);
+  color: $white-color;
   margin-bottom: 30px;
   text-align: center;
 }
 
 .section__item-subtitle {
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 30px;
-  letter-spacing: 0.05em;
-  color: rgb(255, 107, 8);
+  @include font(13px, 500, 30px);
+  color: $primary-color;
   margin-bottom: 12px;
   padding-left: 12px;
   position: relative;
 
   &::before {
-    content: "";
-    display: inline-block;
+    @include pseudo($display: inline-block, $content: '');
     width: 25px;
     height: 2px;
-    background-color: rgb(255, 107, 8);
+    background-color: $primary-color;
     left: 0px;
     top: 50%;
     transform: translate(-12px, -4px);
@@ -57,10 +30,8 @@
 }
 
 .section__item-desc {
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.05em;
-  color: rgb(133, 133, 133);
+  @include font(11px, 400, 20px);
+  color: $gray-color;
 }
 
 .section__item-desc:not(:last-child) {
@@ -73,20 +44,16 @@
 
 .section__item {
   &-title {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 30px;
+    @include font(15px, 700, 30px);
     letter-spacing: 0.11em;
-    color: rgb(255, 255, 255);
+    color: $white-color;
 
     &::before {
-      content: "";
-      display: inline-block;
+      @include pseudo($display: inline-block, $content: '');
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, .35);
-      background-color: rgb(255, 107, 8);
+      background-color: $primary-color;
       transform: translateX(-26px);
     }
 
@@ -95,21 +62,27 @@
     }
 
     &--line::after {
-      content: "";
-      display: block;
+      @include pseudo($display: block, $content: '');
       width: 25px;
       height: 2px;
-      background-color: rgb(255, 107, 8);
+      background-color: $primary-color;
       transform: translateX(12px);
       margin-top: 24px;
     }
+  }
+
+  &:hover .section__item-title::before {
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, .35);
+    transition: box-shadow 0.2s linear;
   }
 }
 
 .section-program-img {
   background-image: url(../images/program/program-mob.png);
-  background-position: right 0 bottom 210px;
+  background-position: right 0 bottom 264px;
   background-repeat: no-repeat;
+  background-size: 143px 183px;
+  max-width: 100%;
 
   @media (min-resolution: 192dpi) {
     background-image: url(../images/program/program-mob@2x.png);
@@ -117,6 +90,18 @@
 }
 
 @media (min-width: 320px) and (max-width: 1279px) {
+  .section__list {
+    position: relative;
+
+    &::before {
+      @include pseudo($display: inline-block, $pos: absolute, $content: '');
+      width: 2px;
+      height: 92%;
+      background-color: rgb(84, 98, 100);
+      transform: translate(63px, 14px);
+    }
+  }
+
   .section__item:not(:last-child) {
     margin-bottom: 22px;
   }
@@ -133,10 +118,6 @@
 
 
 @media (min-width: 768px) {
-  .container {
-    width: 688px;
-  }
-
   .section-program {
     min-height: 1332px;
     padding-top: 70px;
@@ -144,10 +125,6 @@
 
   .section__item-title-desc {
     width: 33%;
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
   }
 
   .section__list::before {
@@ -161,15 +138,15 @@
 
   .section-title {
     text-align: left;
-    font-size: 26px;
-    line-height: 62px;
+    @include font(26px, 800, 62px);
     margin-bottom: 38px;
   }
 
   .section-program-img {
     background-image: url(../images/program/program-tablet.png);
     background-position: right 0 bottom 150px;
-    background-repeat: no-repeat;
+    background-size: 406px 300px;
+
 
     @media (min-resolution: 192dpi) {
       background-image: url(../images/program/program-tablet@2x.png);
@@ -181,6 +158,10 @@
 
   .section__list-title-desc {
     display: flex;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   .section__item {
@@ -189,17 +170,9 @@
 }
 
 @media (min-width: 1280px) {
-  .container {
-    width: 1210px;
-  }
-
   .section__list {
     display: flex;
     justify-content: space-between;
-
-    &::before {
-      height: 0%;
-    }
   }
 
   .section-program::before {
@@ -207,13 +180,12 @@
     display: inline-block;
     height: 2px;
     width: 100%;
-    background-color: #546264;
+    background-color: rgb(84, 98, 100);
     transform: translateY(110px);
   }
 
   .section-title {
-    font-size: 42px;
-    line-height: 62px;
+    @include font(42px, 800, 62px);
     margin-bottom: 84px;
   }
 
@@ -226,7 +198,7 @@
     }
 
     &-desc {
-      width: 20%;
+      width: 100%;
     }
 
     &:not(:last-child) {
@@ -237,10 +209,10 @@
       transform: translate(0px, 26px);
       margin-bottom: 50px;
     }
+  }
 
-    &-desc {
-      width: 230px;
-    }
+  .section__item {
+    width: 20%;
   }
 
   .section__item-subtitle {
@@ -248,8 +220,7 @@
   }
 
   .section__item-desc {
-    font-size: 19px;
-    line-height: 30px;
+    @include font(19px, 400, 30px);
   }
 
   .section__item-title-desc:not(:last-child) {
@@ -266,6 +237,7 @@
   .section-program-img {
     background-image: url(../images/program/program-desc.png);
     background-position: left 0 bottom 160px;
+    background-size: 546px 420px;
   }
 
   @media (min-resolution: 192dpi) {
@@ -276,10 +248,6 @@
 }
 
 @media (min-width: 1680px) {
-  .container {
-    width: 1340px;
-  }
-
   .section-program {
     padding-top: 130px;
     min-height: 1288px;
@@ -310,6 +278,7 @@
   .section-program-img {
     background-image: url(../images/program/program-desktop.png);
     background-position: left 0 bottom 10px;
+    background-size: 700px 517px;
   }
 
   @media (min-resolution: 192dpi) {

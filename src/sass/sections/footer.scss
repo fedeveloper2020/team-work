@@ -6,11 +6,8 @@
 }
 
 .tel {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  line-height: 22px;
-  color: rgb(17, 21, 23);
+  @include font(18px, 600, 22px);
+  color: $dark-bg-color;
   padding-left: 8px;
 }
 
@@ -23,7 +20,7 @@
   }
 
   &--svg {
-    fill: rgb(255, 107, 8);
+    fill: $primary-color;
     width: 22px;
     height: 32px;
   }
@@ -52,48 +49,36 @@
 .logo {
   display: flex;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 800px;
-  color: rgb(0, 0, 0);
+  @include font(15px, 800, 18px);
+  color: $dark-color;
 
   &__item {
     display: flex;
     justify-content: center;
     align-items: flex-end;
 
-    &-desc {
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      line-height: 18px;
-      color: rgb(0, 0, 0);
-    }
   }
 
   &-svg {
-    fill: rgb(255, 107, 8);
     width: 20px;
     height: 23px;
+    fill: $primary-color;
   }
 
   &-desc {
-    font-size: 5px;
-    font-weight: 700;
+    @include font(5px, 700, 8px);
     letter-spacing: 0.13em;
-    line-height: 8px;
-    color: rgb(0, 0, 0);
+    color: $dark-color;
     text-transform: uppercase;
   }
 
   span {
-    color: rgb(255, 107, 8);
+    color: $primary-color;
   }
 }
 
 .footer-bottom {
-  background-color: rgb(17, 21, 23);
+  background-color: $dark-bg-color;
   min-height: 72px;
   display: flex;
   justify-content: center;
@@ -101,10 +86,9 @@
 }
 
 .footer-desc {
-  color: rgba(253, 254, 254, 0.42);
+  color: $text-footer-color;
   line-height: 14px;
-  letter-spacing: 0.05em;
-  
+
   @media (max-width: 767px) {
     text-align: center;
   }
@@ -167,15 +151,10 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
-  .logo {
-    padding-left: 35px;
-  }
-
-  .contact-tel {
-    padding-left: 82px;
-  }
+.contact-tel {
+  padding-left: 82px;
 }
+
 
 @media (min-width: 1280px) {
   .section-footer {
@@ -201,7 +180,6 @@
   }
 
   .contact-tel--svg {
-    fill: rgb(255, 107, 8);
     width: 40px;
     height: 42px;
     padding-top: 6px;
