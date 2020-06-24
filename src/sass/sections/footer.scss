@@ -46,38 +46,38 @@
   }
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
-  @include font(15px, 800, 18px);
-  color: $dark-color;
+// .logo {
+//   display: flex;
+//   justify-content: center;
+//   @include font(15px, 800, 18px);
+//   color: $dark-color;
 
-  &__item {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+//   &__item {
+//     display: flex;
+//     justify-content: center;
+//     align-items: flex-end;
 
-  }
+//   }
 
-  &-svg {
-    width: 20px;
-    height: 23px;
-    fill: $primary-color;
-    margin: 0 4px;
-  }
+//   &-svg {
+//     width: 20px;
+//     height: 23px;
+//     fill: $primary-color;
+//     margin: 0 4px;
+//   }
 
-  &-desc {
-    @include font(5px, 700, 8px);
-    letter-spacing: 0.13em;
-    color: $dark-color;
-    text-transform: uppercase;
-  }
+//   &-desc {
+//     @include font(5px, 700, 8px);
+//     letter-spacing: 0.13em;
+//     color: $dark-color;
+//     text-transform: uppercase;
+//   }
 
-  span {
-    color: $primary-color;
-    margin-right: 6px;
-  }
-}
+//   span {
+//     color: $primary-color;
+//     margin-right: 6px;
+//   }
+// }
 
 .footer-bottom {
   background-color: $dark-bg-color;
@@ -117,21 +117,21 @@
     padding-bottom: 35px;
   }
 
-  .logo__item-desc {
-    font-size: 25px;
-    line-height: 30px;
-  }
+  // .logo__item-desc {
+  //   font-size: 25px;
+  //   line-height: 30px;
+  // }
 
-  .logo-desc {
-    font-size: 8px;
-    letter-spacing: 0.11em;
-    line-height: 10px;
-  }
+  // .logo-desc {
+  //   font-size: 8px;
+  //   letter-spacing: 0.11em;
+  //   line-height: 10px;
+  // }
 
-  .logo-svg {
-    width: 20px;
-    height: 34px;
-  }
+  // .logo-svg {
+  //   width: 20px;
+  //   height: 34px;
+  // }
 
   .tel {
     font-size: 20px;
@@ -192,9 +192,29 @@
   }
 }
 
-
 @media (min-width: 1680px) {
   .contact-tel {
     padding-left: 312px;
+  }
+}
+
+.logo__wrapper-footer {
+  position: absolute;
+  bottom: -1px;
+  left: -41px;
+
+  @media (min-width: 768px) {
+    bottom: 0px;
+    left: 0px;
+  }
+}
+
+.logo__text-footer {
+  bottom: -10px;
+  left: -46px;
+
+  @media (min-width: 768px) {
+    bottom: -12px;
+    left: -4px;
   }
 }

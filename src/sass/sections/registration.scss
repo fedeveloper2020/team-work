@@ -1,4 +1,3 @@
-// Секция - Форма регистарции - Осадчий
 .registration {
   padding-top: 54px;
   padding-bottom: 58px;
@@ -214,4 +213,5 @@
 .invite-button {
   background-color: $primary-color;
   color: $white-color;
+  @include transition;
 }

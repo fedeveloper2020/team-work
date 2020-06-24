@@ -12,55 +12,61 @@
   }
 }
 
-.logo-header {
-  color: $dark-color;
+.logo {
+  text-decoration: none;
   position: relative;
-  z-index: 10;
-  display: flex;
-  text-align: center;
+  z-index: 11;
+
+  &__wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__name {
-    font-size: 25px;
-    font-weight: 800;
-    line-height: 80px;
-
-    &-span {
-      position: absolute;
-      top: 0px;
-      left: 84px;
-    }
+    @include font($fs: 15px, $fw: 800, $lh: 1.2);
+    color: $dark-color;
   }
 
   &__icon {
-    width: 21px;
-    height: 30px;
     fill: $primary-color;
-    position: absolute;
-    top: 22px;
-    left: 59px;
+    width: 26px;
+    height: 22px;
     animation: pulse 3s linear;
     animation-iteration-count: infinite;
   }
-}
 
-.logo-header.active {
+  &__text {
+    @include font($fs: 7px, $fw: 700, $lh: 1.2);
+    color: $dark-color;
+    width: 100px;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 15;
 
-  @media (min-width: 320px) {
-    color: $white-color;
+    &-span {
+      color: $primary-color
+    }
   }
 }
 
-.logo-header__description {
-  position: absolute;
-  font-size: 9px;
-  font-weight: 700;
-  line-height: 30px;
-  text-transform: uppercase;
-  top: 44px;
-  left: 1px;
-  width: 128px;
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 130px;
 
-  &--orange-color {
-    color: $primary-color;
+    &__name {
+      font-size: 25px;
+    }
+
+    &__icon {
+      width: 35px;
+      height: 30px;
+    }
+
+    &__text {
+      width: 200px;
+      font-size: 10px;
+    }
   }
 }

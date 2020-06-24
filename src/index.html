@@ -12,24 +12,35 @@
 </head>
 
 <body>
+  <!-- Хедер - Онисько + Осадчий + Соколов -->
   //= ./html/sections/header.html
   <main>
+    <!-- Секция - Главные проблемы - Таран -->
     //= ./html/sections/problems.html
+    <!-- Секция - Как мы это делаем - Кожемяченко -->
     //= ./html/sections/how.html
+    <!-- Секция - Наша программа - Юрьев -->
     //= ./html/sections/program.html
+    <!-- Секция - Почему нас выбирают - Таран -->
     //= ./html/sections/why.html
+    <!-- Секция - Преподаватель - Путря + Осадчий -->
     //= ./html/sections/teacher.html
+    <!-- Секция - Мы гарантируем - Осадчий -->
     //= ./html/sections/guarantees.html
+    <!-- Секция - Слайдер - Онисько -->
     //= ./html/sections/feedback.html
+    <!-- Секция - Форма регистрации - Осадчий -->
     //= ./html/sections/registration.html
   </main>
+  <!-- футер - Юрьев -->
   //= ./html/sections/footer.html
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
   <script>
     $(document).ready(function () {
       $(".header__menu-burger ").click(function (event) {
-        $(".header__menu-burger,.burger,.burger-button,.logo-header").toggleClass("active");
+        $(".header__menu-burger,.burger,.burger-button,.logo__header,.logo__name,.logo__text").toggleClass(
+          "active");
         $("body").toggleClass("lock");
       });
     });
