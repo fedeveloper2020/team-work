@@ -1,31 +1,22 @@
 // Секция - Мы гарантируем - Осадчий
 .general-section-title {
-  font-size: 20px;
+  @include font(20px, 800, 63px);
   color: $dark-bg-color;
-  font-weight: 800;
-  line-height: 3.127;
   text-align: center;
-  letter-spacing: 1px;
   margin-bottom: 6px;
 
   @media (min-width: 768px) {
-    font-size: 26px;
-    line-height: 2.405;
-    letter-spacing: 1.3px;
+    @include font-two-values(26px, 63px);
     margin-bottom: 20px;
   }
 
   @media (min-width: 1280px) {
-    font-size: 42px;
-    line-height: 1.489;
-    letter-spacing: 2.1px;
+    @include font-two-values(42px, 63px);
     margin-bottom: 34px;
   }
 
   @media (min-width: 1680px) {
-    font-size: 46px;
-    line-height: 1.365;
-    letter-spacing: 2.3px;
+    @include font-two-values(46px, 63px);
     margin-bottom: 44px;
   }  
 }
@@ -41,8 +32,7 @@
 
   &__list {
     padding: 26px 0px 26px 34px;
-    letter-spacing: 0.55px;
-  
+    
     @media (min-width: 768px) {
       background-color: $bg-guarantees-color;
       padding: 36px 50px 30px 98px;
@@ -65,21 +55,16 @@
 
   &__item {
     color: $light-dark-color;
-    line-height: 1.818;
+    line-height: 20px;
     font-weight: 500;
-    letter-spacing: 0.55px;
     position: relative;
 
     @media (min-width: 1280px) {
-      font-size: 18px;
-      line-height: 1.62;
-      letter-spacing: 0.9px;
+      @include font-two-values(18px, 30px);
     }
 
     @media (min-width: 1680px) {
-      font-size: 21px;
-      line-height: 1.4;
-      letter-spacing: 1.05px;
+      @include font-two-values(20px, 28px);
     }
   
     &:not(:last-child) {
@@ -92,8 +77,7 @@
   
     &::before {
       @extend %pseudo;
-      width: 24px;
-      height: 24px;
+      @include rectangle(24px, 24px);
       background-image: url(../images/guarantees/noun_Campfire_2425646.svg);
       background-repeat: no-repeat;
       background-position: center;
