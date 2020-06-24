@@ -16,9 +16,8 @@
   }
 }
 
-
 .nav {
-  @include flex($align-items:center);
+  @include flex($align-items: center);
   @include position(relative);
 }
 
@@ -39,7 +38,7 @@
 }
 
 .menu-list {
-  @include font($fs:12px, $fw: 700, $lh:1.2);
+  @include font($fs: 12px, $fw: 700, $lh: 1.2);
   display: none;
   padding: 0;
   letter-spacing: 0.04em;
@@ -64,11 +63,9 @@
     @media (min-width: 1680px) {
       margin-right: 54px;
     }
-
   }
 
   &__item-link {
-
     @include transition;
 
     @media (min-width: 1280px) {
@@ -201,7 +198,7 @@
 
   &::before,
   &::after {
-    @include position($position: absolute, $left:0);
+    @include position($position: absolute, $left: 0);
     @include transition;
     content: '';
     background-color: $light-dark-color;
@@ -508,7 +505,6 @@ body.lock {
 }
 
 .logo__header.active {
-
   @media (min-width: 320px) {
     color: $white-color;
     z-index: 100;
