@@ -1,19 +1,12 @@
 .section-black-title {
-  @include font(20px, 800, 30px);
   color: $dark-bg-color;
   margin-bottom: 26px;
 
-  @media (min-width: 768px) {
-    @include font-two-values(26px, 63px);
-  }
-
   @media (min-width: 1280px) {
-    @include font-two-values(42px, 63px);
     margin-bottom: 54px;
   }
 
   @media (min-width: 1680px) {
-    @include font-two-values(46px, 63px);
     margin-bottom: 72px;
   }
 }

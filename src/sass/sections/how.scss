@@ -17,23 +17,15 @@
   }
 
   &__title {
-    @include font(20px, 800, 1.3);
-    font-size: 20px;
     color: $light-dark-color;
     text-align: center;
-    letter-spacing: 0.05em;
-    // margin-bottom: 24px;
     margin-bottom: 34px;
 
     @media (min-width: 768px) {
-      font-size: 26px;
-      line-height: 2.4;
       margin-bottom: 38px;
     }
 
     @media (min-width: 1280px) {
-      font-size: 42px;
-      line-height: 1.5;
       text-align: left;
       margin-bottom: 44px;
     }
