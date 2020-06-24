@@ -1,0 +1,17 @@
+.title {
+  @include font($fs: 20px, $fw: 800, $lh: 30px);
+
+  @media (min-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 42px;
+    line-height: 56px;
+  }
+
+  @media (min-width: 1680px) {
+    font-size: 46px;
+    line-height: 62px;
+  }
+}

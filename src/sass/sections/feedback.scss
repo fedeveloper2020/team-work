@@ -14,23 +14,9 @@
   }
 
   &__title {
-    @include font(20px, 800, 26.5px);
-    letter-spacing: 0.05em;
     color: $dark-bg-color;
     text-align: center;
     margin: 0 0 20px;
-
-    @media (min-width: 768px) {
-      @include font(26px, 800, 62px);
-    }
-
-    @media (min-width: 1280px) {
-      font-size: 42px;
-    }
-
-    @media (min-width: 1680px) {
-      font-size: 46px;
-    }
   }
 }
 

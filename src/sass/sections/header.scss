@@ -23,6 +23,7 @@
 }
 
 .header__navigation {
+  margin-bottom: 40px;
 
   @media (min-width: 768px) {
     margin-bottom: 60px;
@@ -270,7 +271,6 @@ body.lock {
   }
 
   &__name {
-    @include font($fs: 20px, $fw: 800, $lh: 1.45);
     color: $light-dark-color;
     text-align: left;
     margin-top: 0px;
