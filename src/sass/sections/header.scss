@@ -474,3 +474,53 @@ body.lock {
     }
   }
 }
+
+.logo__header {
+  z-index: 10;
+}
+
+.logo__wrapper-header {
+  position: absolute;
+  bottom: -10px;
+
+  @media (min-width: 768px) {
+    bottom: -33px;
+  }
+
+  @media (min-width: 1280px) {
+    bottom: -8px;
+  }
+}
+
+.logo__text-header {
+  bottom: -19px;
+  left: -4px;
+  width: 98px;
+
+  @media (min-width: 768px) {
+    bottom: -50px;
+    width: 200px;
+  }
+
+  @media (min-width: 1280px) {
+    bottom: -23px;
+  }
+}
+
+.logo__header.active {
+
+  @media (min-width: 320px) {
+    color: $white-color;
+    z-index: 100;
+  }
+}
+
+.logo__text.active {
+  color: $white-color;
+  z-index: 100;
+}
+
+.logo__name.active {
+  color: $white-color;
+  z-index: 100;
+}
