@@ -1,28 +1,19 @@
 .section-black-title {
-  font-size: 20px;
+  @include font(20px, 800, 30px);
   color: $dark-bg-color;
-  font-weight: 800;
-  line-height: 1.5;
-  letter-spacing: 1px;
   margin-bottom: 26px;
 
   @media (min-width: 768px) {
-    font-size: 26px;
-    line-height: 2.405;
-    letter-spacing: 1.3px;
+    @include font-two-values(26px, 63px);
   }
 
   @media (min-width: 1280px) {
-    font-size: 42px;
-    line-height: 1.489;
-    letter-spacing: 2.1px;
+    @include font-two-values(42px, 63px);
     margin-bottom: 54px;
   }
 
   @media (min-width: 1680px) {
-    font-size: 46px;
-    line-height: 1.365;
-    letter-spacing: 2.3px;
+    @include font-two-values(46px, 63px);
     margin-bottom: 72px;
   }
 }
@@ -70,23 +61,17 @@
   }
 
   &__name {
-    font-size: 16px;
+    @include font(16px, 800, 30px);
     color: $dark-bg-color;
-    font-weight: 800;
-    line-height: 1.823;
-    letter-spacing: 0.8px;
+
 
     @media (min-width: 768px) {
-      font-size: 20px;
-      line-height: 1;
-      letter-spacing: 1px;
+      @include font-two-values(20px, 20px);
       margin-bottom: 14px;
     }
 
     @media (min-width: 1280px) {
-      font-size: 28px;
-      line-height: 1;
-      letter-spacing: 1.4px;
+      @include font-two-values(28px, 28px);
     }
   }
 
@@ -106,18 +91,13 @@
     }
 
     &-item {
-      font-size: 13px;
+
+      @include font(13px, 600, 21px);
       color: $dark-bg-color;
-      ;
-      font-weight: 600;
-      letter-spacing: 0.65px;
       position: relative;
-      line-height: 1.6;
 
       @media (min-width: 1280px) {
-        font-size: 16px;
-        line-height: 1.75;
-        letter-spacing: 0.8px;
+        @include font-two-values(16px, 28px);
       }
 
       &:not(:last-child) {
@@ -126,8 +106,7 @@
 
       &::before {
         @extend %pseudo;
-        width: 40px;
-        height: 32px;
+        @include rectangle(40px, 32px);
         background-image: url(../images/teacher/noun_Check_2422424.svg);
         background-repeat: no-repeat;
         background-position: center;
@@ -144,8 +123,7 @@
   &__qualification {
     color: $gray-color;
     font-weight: 500;
-    line-height: 1.818;
-    letter-spacing: 0.55px;
+    line-height: 20px;
     margin-bottom: 16px;
     padding-left: 16px;
 
@@ -154,17 +132,14 @@
     }
 
     @media (min-width: 1280px) {
-      font-size: 16px;
-      line-height: 1.75;
-      letter-spacing: 0.8px;
+      @include font-two-values(16px, 28px);
       padding-right: 30px;
     }
 
     &::before {
       content: "";
       display: block;
-      width: 25px;
-      height: 2px;
+      @include rectangle(25px, 2px);
       background-color: $primary-color;
       margin-bottom: 18px;
 
@@ -194,8 +169,7 @@
   &__certificate {
     color: $primary-color;
     font-weight: 400;
-    line-height: 1.818;
-    letter-spacing: 0.55px;
+    line-height: 20px;
     padding-left: 16px;
 
     @media (min-width: 768px) {
@@ -203,9 +177,7 @@
     }
 
     @media (min-width: 1280px) {
-      font-size: 16px;
-      line-height: 1.75;
-      letter-spacing: 0.8px;
+      @include font-two-values(16px, 28px);
     }
   }
 }
