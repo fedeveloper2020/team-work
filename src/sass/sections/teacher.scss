@@ -11,7 +11,7 @@
     line-height: 2.405;
     letter-spacing: 1.3px;
   }
-  
+
   @media (min-width: 1280px) {
     font-size: 42px;
     line-height: 1.489;
@@ -28,13 +28,25 @@
 }
 
 .teacher {
-  padding-top: 244px;
+  padding-top: 24px;
   padding-bottom: 10px;
-  
+
+  @media (min-width: 768px) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 48px;
+  }
+
+  @media (min-width: 1680px) {
+    padding-top: 60px;
+  }
+
   &__wraper {
     display: flex;
     flex-wrap: wrap;
-    
+
     @media (min-width: 768px) {
       flex-wrap: nowrap;
       align-items: flex-start;
@@ -51,7 +63,7 @@
     @media (min-width: 768px) {
       padding-left: 44px;
     }
-  
+
     @media (min-width: 1280px) {
       padding-left: 86px;
     }
@@ -95,7 +107,8 @@
 
     &-item {
       font-size: 13px;
-      color: $dark-bg-color;;
+      color: $dark-bg-color;
+      ;
       font-weight: 600;
       letter-spacing: 0.65px;
       position: relative;
@@ -120,7 +133,7 @@
         background-position: center;
         left: -48px;
         top: -2px;
-      
+
         @media (min-width: 1280px) {
           left: -42px;
         }
@@ -135,7 +148,7 @@
     letter-spacing: 0.55px;
     margin-bottom: 16px;
     padding-left: 16px;
-    
+
     @media (min-width: 768px) {
       padding-left: 0px;
     }
@@ -154,15 +167,20 @@
       height: 2px;
       background-color: $primary-color;
       margin-bottom: 18px;
-    
-      @media (min-width: 1280px) {margin-bottom: 30px;}
-      @media (min-width: 1680px) {margin-bottom: 36px;}
+
+      @media (min-width: 1280px) {
+        margin-bottom: 30px;
+      }
+
+      @media (min-width: 1680px) {
+        margin-bottom: 36px;
+      }
     }
 
     &--new-line {
       display: block;
       margin-top: 16px;
-    
+
       @media (min-width: 1280px) {
         margin-top: 22px;
       }
@@ -183,7 +201,7 @@
     @media (min-width: 768px) {
       padding-left: 0px;
     }
-  
+
     @media (min-width: 1280px) {
       font-size: 16px;
       line-height: 1.75;
@@ -191,4 +209,3 @@
     }
   }
 }
-
