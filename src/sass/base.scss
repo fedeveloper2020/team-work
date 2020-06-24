@@ -30,18 +30,3 @@ body {
 .link {
   text-decoration: none;
 }
-
-.button {
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: transparent;
-  text-align: center;
-  letter-spacing: 0.2em;
-  width: 246px;
-  height: 44px;
-  color: $primary-color;
-  border: 2px solid $primary-color;
-  padding: 0px 5px;
-  font-size: 10px;
-  cursor: pointer;
-}
