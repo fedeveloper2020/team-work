@@ -122,25 +122,18 @@
   }
 
   &__title {
-    font-size: 14px;
+    @include font(14px, 800, 26px);
     color: $white-color;
-    font-weight: 800;
-    line-height: 1.86;
     text-align: center;
-    letter-spacing: 0.7px;
     margin-bottom: 12px;
   
     @media (min-width: 768px) {
-      font-size: 22px;
-      line-height: 1.729;
-      letter-spacing: 1.1px;
+      @include font-two-values(22px, 38px);
       margin-bottom: 30px;
     }
 
     @media (min-width: 1280px) {
-      font-size: 38px;
-      line-height: 1.334;
-      letter-spacing: 1.9px;
+      @include font-two-values(38px, 50px);
       margin-bottom: 52px;
     }
 
@@ -167,28 +160,21 @@
   &__description {
     color: $white-color;
     font-weight: 600;
-    line-height: 1.818;
+    line-height: 20px;
     text-align: center;
-    letter-spacing: 0.55px;
     margin-bottom: 26px;
   
     @media (min-width: 768px) {
-      font-size: 15px;
-      line-height: 1.333;
-      letter-spacing: 0.75px;
+      @include font-two-values(15px, 20px);
       margin-bottom: 52px;
     }
 
     @media (min-width: 1280px) {
-      font-size: 18px;
-      line-height: 1.361;
-      letter-spacing: 0.9px;
+      @include font-two-values(18px, 25px);
     }
 
     @media (min-width: 1680px) {
-      font-size: 25px;
-      line-height: 1.5;
-      letter-spacing: 1.25px;
+      @include font-two-values(25px, 38px);
     }
 
     &--highlight {
@@ -230,14 +216,10 @@
   border-color: $white-color;
   border-style: solid;
   background-color: transparent;
-  width: 278px;
-  height: 48px;
+  @include rectangle(278px, 48px);
   padding-left: 22px;
-  font-size: 13px;
+  @include font(13px, 600, 38px);
   color: $white-color;
-  font-weight: 600;
-  line-height: 2.885;
-  letter-spacing: 0.65px;
   text-align: left;
 
   @media (min-width: 768px) {
@@ -245,26 +227,18 @@
   }
 
   @media (min-width: 1280px) {
-    width: 618px;
-    height: 70px;
+    @include rectangle(618px, 70px);
     padding-left: 26px;
-    font-size: 21px;
-    line-height: 1.8;
-    letter-spacing: 1.05px;
+    @include font-two-values(21px, 38px);
   }
 
   &::placeholder {
-    font-size: 13px;
+    @include font(13px, 600, 38px);
     color: $white-color;
-    font-weight: 600;
-    line-height: 2.885;
-    letter-spacing: 0.65px;
     text-align: left;
 
     @media (min-width: 1280px) {
-      font-size: 21px;
-      line-height: 1.8;
-      letter-spacing: 1.05px;
+      @include font-two-values(21px, 38px);
     }
   }
 }

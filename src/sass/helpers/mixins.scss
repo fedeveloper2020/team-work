@@ -47,3 +47,13 @@
 @mixin transition($property: all, $duration: 0.3s, $ease: linear) {
   transition: $property $duration $ease;
 }
+
+@mixin font-two-values($fs, $lh) {
+  font-size: $fs;
+  line-height: $lh;
+}
+
+@mixin rectangle($w, $h) {
+  width: $w;
+  height: $h;
+}
