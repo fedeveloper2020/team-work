@@ -6,7 +6,7 @@
   @media (min-width: 768px) {
     @include font-two-values(26px, 63px);
   }
-  
+
   @media (min-width: 1280px) {
     @include font-two-values(42px, 63px);
     margin-bottom: 54px;
@@ -19,13 +19,25 @@
 }
 
 .teacher {
-  padding-top: 244px;
+  padding-top: 24px;
   padding-bottom: 10px;
-  
+
+  @media (min-width: 768px) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 48px;
+  }
+
+  @media (min-width: 1680px) {
+    padding-top: 60px;
+  }
+
   &__wraper {
     display: flex;
     flex-wrap: wrap;
-    
+
     @media (min-width: 768px) {
       flex-wrap: nowrap;
       align-items: flex-start;
@@ -42,7 +54,7 @@
     @media (min-width: 768px) {
       padding-left: 44px;
     }
-  
+
     @media (min-width: 1280px) {
       padding-left: 86px;
     }
@@ -79,8 +91,9 @@
     }
 
     &-item {
+
       @include font(13px, 600, 21px);
-      color: $dark-bg-color;;
+      color: $dark-bg-color;
       position: relative;
 
       @media (min-width: 1280px) {
@@ -99,7 +112,7 @@
         background-position: center;
         left: -48px;
         top: -2px;
-      
+
         @media (min-width: 1280px) {
           left: -42px;
         }
@@ -113,7 +126,7 @@
     line-height: 20px;
     margin-bottom: 16px;
     padding-left: 16px;
-    
+
     @media (min-width: 768px) {
       padding-left: 0px;
     }
@@ -129,15 +142,20 @@
       @include rectangle(25px, 2px);
       background-color: $primary-color;
       margin-bottom: 18px;
-    
-      @media (min-width: 1280px) {margin-bottom: 30px;}
-      @media (min-width: 1680px) {margin-bottom: 36px;}
+
+      @media (min-width: 1280px) {
+        margin-bottom: 30px;
+      }
+
+      @media (min-width: 1680px) {
+        margin-bottom: 36px;
+      }
     }
 
     &--new-line {
       display: block;
       margin-top: 16px;
-    
+
       @media (min-width: 1280px) {
         margin-top: 22px;
       }
@@ -157,10 +175,9 @@
     @media (min-width: 768px) {
       padding-left: 0px;
     }
-  
+
     @media (min-width: 1280px) {
       @include font-two-values(16px, 28px);
     }
   }
 }
-

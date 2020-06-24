@@ -12,12 +12,12 @@
 </head>
 
 <body>
-  <!-- Хедер - Соколов -->
+  //= ./html/sections/header.html
   <main>
     //= ./html/sections/problems.html
     //= ./html/sections/how.html
     //= ./html/sections/program.html
-    <!-- //= ./html/sections/why.html -->
+    //= ./html/sections/why.html
     //= ./html/sections/teacher.html
     //= ./html/sections/guarantees.html
     //= ./html/sections/feedback.html
@@ -25,8 +25,16 @@
   </main>
   //= ./html/sections/footer.html
 
-  <!-- Сюда будет всталена ссылка на файл скриптов -->
-  <!-- inject:js -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".header__menu-burger ").click(function (event) {
+        $(".header__menu-burger,.burger,.burger-button,.logo-header").toggleClass("active");
+        $("body").toggleClass("lock");
+      });
+    });
+
+  </script>
   <!-- endinject -->
 </body>
 

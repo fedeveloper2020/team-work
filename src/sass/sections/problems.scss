@@ -5,17 +5,19 @@
 
   @media (min-width: 768px) {
     padding-top: 60px;
-    padding-bottom: 36px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: 1280px) {
     padding-top: 78px;
     padding-bottom: 48px;
   }
+
   @media (min-width: 1680px) {
     padding-top: 116px;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
   }
+
   &::before {
     content: '';
     @include position(absolute, $top: 0);
@@ -26,29 +28,23 @@
 
     @media (min-width: 768px) {
       height: 332px;
-      @include background(
-        '../images/problems/fire.png',
+      @include background('../images/problems/fire.png',
         $position: right bottom,
-        $size: 210px 313px
-      );
+        $size: 210px 313px);
     }
 
     @media (min-width: 1280px) {
       height: 524px;
-      @include background(
-        '../images/problems/fire-1280.png',
+      @include background('../images/problems/fire-1280.png',
         $position: right bottom,
-        $size: 356px 534px
-      );
+        $size: 356px 534px);
     }
 
     @media (min-width: 1680px) {
       height: 560px;
-      @include background(
-        '../images/problems/fire-1680.png',
+      @include background('../images/problems/fire-1680.png',
         $position: right bottom,
-        $size: 392px 584px
-      );
+        $size: 392px 584px);
     }
   }
 
@@ -119,7 +115,7 @@
 
   &::before {
     display: block;
-    content: '0' counter(problem);
+    content: '0'counter(problem);
     margin-left: 34px;
     margin-bottom: 10px;
     color: $primary-color;

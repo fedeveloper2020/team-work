@@ -11,13 +11,14 @@
 
 @import 'base.scss';
 @import './components/container.scss';
+@import './components/logo.scss';
 
 // Замість коментарів підключаємо свої секції
-// Хедер - Соколов
+@import './sections/header.scss';
 @import './sections/problems.scss';
 @import './sections/how.scss';
 @import './sections/program.scss';
-// @import './sections/why.scss';
+@import './sections/why.scss';
 @import './sections/teacher.scss';
 @import './sections/guarantees.scss';
 @import './sections/feedback.scss';
