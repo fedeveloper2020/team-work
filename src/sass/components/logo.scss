@@ -35,10 +35,12 @@
     height: 22px;
     animation: pulse 3s linear;
     animation-iteration-count: infinite;
+    position: relative;
+    top: -4px;
   }
 
   &__text {
-    @include font($fs: 7px, $fw: 700, $lh: 1.2);
+    @include font($fs: 5.7px, $fw: 700, $lh: 1.2);
     color: $dark-color;
     width: 100px;
     text-transform: uppercase;
@@ -66,7 +68,7 @@
 
     &__text {
       width: 200px;
-      font-size: 10px;
+      font-size: 9px;
     }
   }
 }

@@ -1,6 +1,13 @@
 .header {
   padding-top: 24px;
   padding-bottom: 50px;
+  background-image: url(../images/header/shadow-wave.svg);
+  background-repeat: no-repeat;
+  
+  @media (max-width: 767px) {
+    background-position: 10% 68%;
+    background-size: 575px 320px;  
+  }
 
   @media (min-width: 768px) {
     padding-top: 30px;
@@ -8,11 +15,13 @@
 
   @media (min-width: 1280px) {
     padding-bottom: 84px;
+    background-position: 0% 104%;
   }
 
   @media (min-width: 1680px) {
     padding-top: 30px;
     padding-bottom: 124px;
+    background-position: 0% 86%;
   }
 }
 
@@ -250,7 +259,7 @@ body.lock {
 
   &--wraper {
     @include flex($flex-direction: column);
-    margin-bottom: 28px;
+    margin-bottom: 70px;
 
     @media (min-width: 768px) {
       @include flex($justify-content: space-between, $flex-direction: row);
@@ -262,7 +271,7 @@ body.lock {
       margin-bottom: 182px;
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1680px) {
       margin-bottom: 280px;
     }
   }
@@ -490,17 +499,18 @@ body.lock {
 }
 
 .logo__text-header {
-  bottom: -19px;
-  left: -4px;
+  bottom: -15px;
+  left: 0px;
   width: 98px;
 
   @media (min-width: 768px) {
-    bottom: -50px;
+    bottom: -42px;
+    left: 2px;
     width: 200px;
   }
 
   @media (min-width: 1280px) {
-    bottom: -23px;
+    bottom: -18px;
   }
 }
 
@@ -520,3 +530,4 @@ body.lock {
   color: $white-color;
   z-index: 100;
 }
+
