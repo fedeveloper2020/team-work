@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$(".header__menu-burger ").click(function(e){$(".header__menu-burger,.burger,.burger-button,.logo").toggleClass("active"),$("body").toggleClass("lock")})});
