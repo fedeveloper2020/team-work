@@ -1,0 +1,234 @@
+.registration {
+  padding-top: 54px;
+  padding-bottom: 58px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $dark-bg-color;
+  background-image: linear-gradient(rgba(17, 21, 23, 0.7),
+      rgba(17, 21, 23, 0.7)),
+    repeating-linear-gradient(-45deg,
+      rgba(0, 0, 0, 0.2) 2px,
+      rgba(0, 0, 0, 0.3) 6px,
+      rgba(0, 0, 0, 0.3) 6px),
+    url(../images/registration/lesson-mobile.JPG);
+
+  @media (min-resolution: 192dpi) {
+    background-image: linear-gradient(rgba(17, 21, 23, 0.7),
+        rgba(17, 21, 23, 0.7)),
+      repeating-linear-gradient(-45deg,
+        rgba(0, 0, 0, 0.2) 2px,
+        rgba(0, 0, 0, 0.3) 6px,
+        rgba(0, 0, 0, 0.3) 6px),
+      url(../images/registration/lesson-mobile@2x.JPG);
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 46px;
+    padding-bottom: 64px;
+    background-image: linear-gradient(rgba(17, 21, 23, 0.7),
+        rgba(17, 21, 23, 0.7)),
+      repeating-linear-gradient(-45deg,
+        rgba(0, 0, 0, 0.2) 2px,
+        rgba(0, 0, 0, 0.3) 6px,
+        rgba(0, 0, 0, 0.3) 6px),
+      url(../images/registration/lesson-tablet.JPG);
+
+    @media (min-resolution: 192dpi) {
+      background-image: linear-gradient(rgba(17, 21, 23, 0.7),
+          rgba(17, 21, 23, 0.7)),
+        repeating-linear-gradient(-45deg,
+          rgba(0, 0, 0, 0.2) 2px,
+          rgba(0, 0, 0, 0.3) 6px,
+          rgba(0, 0, 0, 0.3) 6px),
+        url(../images/registration/lesson-tablet@2x.JPG);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 86px;
+    padding-bottom: 88px;
+    background-image: linear-gradient(rgba(17, 21, 23, 0.7),
+        rgba(17, 21, 23, 0.7)),
+      repeating-linear-gradient(-45deg,
+        rgba(0, 0, 0, 0.2) 2px,
+        rgba(0, 0, 0, 0.3) 6px,
+        rgba(0, 0, 0, 0.3) 6px),
+      url(../images/registration/lesson-1280px.JPG);
+
+    @media (min-resolution: 192dpi) {
+      background-image: linear-gradient(rgba(17, 21, 23, 0.7),
+          rgba(17, 21, 23, 0.7)),
+        repeating-linear-gradient(-45deg,
+          rgba(0, 0, 0, 0.2) 2px,
+          rgba(0, 0, 0, 0.3) 6px,
+          rgba(0, 0, 0, 0.3) 6px),
+        url(../images/registration/lesson-1280px@2x.JPG);
+    }
+  }
+
+  @media (min-width: 1680px) {
+    padding-top: 128px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(rgba(17, 21, 23, 0.7),
+        rgba(17, 21, 23, 0.7)),
+      repeating-linear-gradient(-45deg,
+        rgba(0, 0, 0, 0.2) 2px,
+        rgba(0, 0, 0, 0.3) 6px,
+        rgba(0, 0, 0, 0.3) 6px),
+      url(../images/registration/lesson-1680px.JPG);
+
+    @media (min-resolution: 192dpi) {
+      background-image: linear-gradient(rgba(17, 21, 23, 0.7),
+          rgba(17, 21, 23, 0.7)),
+        repeating-linear-gradient(-45deg,
+          rgba(0, 0, 0, 0.2) 2px,
+          rgba(0, 0, 0, 0.3) 6px,
+          rgba(0, 0, 0, 0.3) 6px),
+        url(../images/registration/lesson-1680px@2x.JPG);
+    }
+  }
+
+  &__title {
+    @include font(14px, 800, 26px);
+    color: $white-color;
+    text-align: center;
+    margin-bottom: 12px;
+
+    @media (min-width: 768px) {
+      @include font-two-values(22px, 38px);
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 1280px) {
+      @include font-two-values(38px, 50px);
+      margin-bottom: 52px;
+    }
+
+    @media (min-width: 1680px) {
+      margin-bottom: 70px;
+      padding: 0px 28px;
+    }
+
+    &--highlight {
+      color: $primary-color;
+    }
+
+    &--new-line {
+      display: block;
+    }
+
+    &--new-line-mobile {
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+  }
+
+  &__description {
+    color: $white-color;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 26px;
+
+    @media (min-width: 768px) {
+      @include font-two-values(15px, 20px);
+      margin-bottom: 52px;
+    }
+
+    @media (min-width: 1280px) {
+      @include font-two-values(18px, 25px);
+    }
+
+    @media (min-width: 1680px) {
+      @include font-two-values(25px, 38px);
+    }
+
+    &--highlight {
+      color: $primary-color;
+    }
+
+    &--new-line {
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__client-name {
+    margin-bottom: 20px;
+
+    @media (min-width: 1280px) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__client-phone {
+    margin-bottom: 54px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.mutual-input {
+  border-width: 1px;
+  border-color: $white-color;
+  border-style: solid;
+  background-color: transparent;
+  @include rectangle(278px, 48px);
+  padding-left: 22px;
+  @include font(13px, 600, 38px);
+  color: $white-color;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    width: 398px;
+  }
+
+  @media (min-width: 1280px) {
+    @include rectangle(618px, 70px);
+    padding-left: 26px;
+    @include font-two-values(21px, 38px);
+  }
+
+  &::placeholder {
+    @include font(13px, 600, 38px);
+    color: $white-color;
+    text-align: left;
+
+    @media (min-width: 1280px) {
+      @include font-two-values(21px, 38px);
+    }
+  }
+}
+
+.invite-button {
+  background-color: $primary-color;
+  color: $white-color;
+  @include transition;
+
+  @media (min-width: 1280px) {
+    font-size: 14px;
+    @include rectangle(350px, 68px);
+  }
+
+  &--desktop {
+    @media (min-width: 1280px) {
+      font-size: 12px;
+      @include rectangle(300px, 68px);
+    }
+
+    @media (min-width: 1680px) {
+      font-size: 14px;
+      @include rectangle(350px, 68px);
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.why {
+  @include position(relative);
+  display: flex;
+  padding-bottom: 20px;
+
+  @media (min-width:768px) {
+    padding-bottom: 35px;
+  }
+
+  @media (min-width:1280px) {
+    padding-bottom: 45px;
+  }
+
+  @media (min-width:1680px) {
+    padding-bottom: 60px;
+  }
+
+
+  & .why-wrapper {
+    position: relative;
+    margin-top: -338px;
+
+    @media (min-width: 768px) {
+      margin-top: -124px;
+    }
+
+    @media (min-width: 1280px) {
+      margin-top: -334px;
+    }
+
+    @media (min-width: 1680px) {
+      margin-top: -244px;
+    }
+  }
+
+  &__title {
+    width: 50%;
+    color: $white-color;
+    margin: 0 0 20px;
+
+    @media (min-width: 768px) {
+      text-align: center;
+      width: 100%;
+      margin: 0 0 22px;
+    }
+
+    @media (min-width: 1280px) {
+      margin: 0 0 40px;
+    }
+
+    @media (min-width: 1680px) {
+      margin: 0 0 50px;
+    }
+  }
+}

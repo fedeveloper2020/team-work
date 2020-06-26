@@ -1,0 +1,170 @@
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 14px;
+}
+
+.tel {
+  @include font(18px, 600, 22px);
+  color: $dark-bg-color;
+  padding-left: 8px;
+}
+
+.contact-tel {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+
+  &--svg {
+    fill: $primary-color;
+    width: 22px;
+    height: 32px;
+  }
+}
+
+.insta-link {
+  display: block;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/footer/instagram.svg');
+
+  @media (max-width: 767px) {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-footer {
+    padding-top: 38px;
+  }
+}
+
+.footer-bottom {
+  background-color: $dark-bg-color;
+  min-height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-desc {
+  color: $text-footer-color;
+  line-height: 14px;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-footer {
+    padding-top: 48px;
+  }
+
+  .contact-tel {
+    padding-left: 82px;
+  }
+
+  .footer-top {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 35px;
+  }
+
+  .tel {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .insta-link:nth-child(2) {
+    order: -1;
+    transform: translateY(-4px);
+  }
+
+  .insta-link {
+    margin-left: 60px;
+  }
+
+  .insta-link::before {
+    content: '';
+    display: inline-block;
+    background-color: rgb(224, 224, 224);
+    width: 1px;
+    height: 30px;
+    transform: translateX(-30px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-footer {
+    padding-top: 58px;
+  }
+
+  .footer-top {
+    padding-bottom: 52px;
+  }
+
+  .contact-tel {
+    padding-left: 260px;
+  }
+
+  .footer-top {
+    align-items: flex-end;
+  }
+
+  .tel {
+    font-size: 28px;
+    line-height: 34px;
+    padding-top: 4px;
+  }
+
+  .contact-tel--svg {
+    width: 40px;
+    height: 42px;
+    padding-top: 6px;
+  }
+
+  .insta-link {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .contact-tel {
+    padding-left: 312px;
+  }
+}
+
+.logo__wrapper-footer {
+  position: absolute;
+  bottom: 11px;
+  left: -41px;
+
+  @media (min-width: 768px) {
+    left: 0px;
+  }
+}
+
+.logo__text-footer {
+  bottom: 6px;
+  left: -41px;
+
+  @media (min-width: 768px) {
+    bottom: 0px;
+    left: 0px;
+  }
+}

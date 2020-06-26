@@ -1,0 +1,94 @@
+.general-section-title {
+  color: $dark-bg-color;
+  text-align: center;
+  margin-bottom: 12px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: 1680px) {
+    margin-bottom: 44px;
+  }
+}
+
+.guarantees {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: 768px) {
+    padding-top: 54px;
+    padding-bottom: 58px;
+  }
+
+  &__list {
+    padding: 26px 0px 26px 34px;
+
+    @media (min-width: 768px) {
+      background-color: $bg-guarantees-color;
+      padding: 36px 50px 30px 98px;
+    }
+
+    @media (min-width: 1280px) {
+      padding: 50px 134px 44px 172px;
+    }
+
+    @media (min-width: 1680px) {
+      padding: 65px 138px 58px 148px;
+    }
+
+    &-wrapper {
+      @media (max-width: 767px) {
+        background-color: $bg-guarantees-color;
+      }
+    }
+  }
+
+  &__item {
+    color: $light-dark-color;
+    line-height: 20px;
+    font-weight: 500;
+    position: relative;
+
+    @media (min-width: 1280px) {
+      @include font-two-values(18px, 30px);
+    }
+
+    @media (min-width: 1680px) {
+      @include font-two-values(20px, 28px);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &--highlight {
+      color: $primary-color;
+    }
+
+    &::before {
+      @extend %pseudo;
+      @include rectangle(24px, 24px);
+      background-image: url(../images/guarantees/noun_Campfire_2425646.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      left: -37px;
+      z-index: 1;
+    }
+
+    &:not(:last-child)::after {
+      @extend %pseudo;
+      width: 2px;
+      height: 120%;
+      border-width: 1px;
+      border-color: $light-gray-color;
+      border-style: dotted;
+      top: 15px;
+      left: -26px;
+    }
+  }
+}

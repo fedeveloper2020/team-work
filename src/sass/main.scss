@@ -1,0 +1,28 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'normalize.scss';
+@import './helpers/fonts.scss';
+@import './helpers/variables.scss';
+@import './helpers/mixins.scss';
+@import './helpers/placeholders.scss';
+@import './helpers/visually-hidden.scss';
+
+@import 'base.scss';
+@import './components/container.scss';
+@import './components/logo.scss';
+@import './components/button.scss';
+@import './components/title.scss';
+
+// Замість коментарів підключаємо свої секції
+@import './sections/header.scss';
+@import './sections/problems.scss';
+@import './sections/how.scss';
+@import './sections/program.scss';
+@import './sections/why.scss';
+@import './sections/teacher.scss';
+@import './sections/guarantees.scss';
+@import './sections/feedback.scss';
+@import './sections/registration.scss';
+@import './sections/footer.scss';
