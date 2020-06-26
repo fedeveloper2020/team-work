@@ -214,4 +214,21 @@
   background-color: $primary-color;
   color: $white-color;
   @include transition;
+
+  @media (min-width: 1280px) {
+    font-size: 14px;
+    @include rectangle(350px, 68px);
+  }
+
+  &--desktop {
+    @media (min-width: 1280px) {
+      font-size: 12px;
+      @include rectangle(300px, 68px);
+    }
+
+    @media (min-width: 1680px) {
+      font-size: 14px;
+      @include rectangle(350px, 68px);
+    }
+  }
 }

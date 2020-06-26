@@ -168,17 +168,24 @@
     color: $white-color;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 767px) {
     display: none;
   }
 
   @media (min-width: 768px) {
-    margin-left: 330px;
+    margin-left: 374px;
   }
 
   @media (min-width: 1280px) {
     margin-left: 0;
     margin-right: 0;
+    font-size: 12px;
+    @include rectangle(296px, 64px);
+  }
+
+  @media (min-width: 1680px) {
+    font-size: 14px;
+    @include rectangle(346px, 64px);
   }
 }
 
