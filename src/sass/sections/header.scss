@@ -3,10 +3,10 @@
   padding-bottom: 50px;
   background-image: url(../images/header/shadow-wave.svg);
   background-repeat: no-repeat;
-  
+
   @media (max-width: 767px) {
     background-position: 10% 68%;
-    background-size: 575px 320px;  
+    background-size: 575px 320px;
   }
 
   @media (min-width: 768px) {
@@ -494,10 +494,10 @@ body.lock {
 
 .logo__wrapper-header {
   position: absolute;
-  bottom: -10px;
+  bottom: -11px;
 
   @media (min-width: 768px) {
-    bottom: -33px;
+    bottom: -13px;
   }
 
   @media (min-width: 1280px) {
@@ -511,7 +511,7 @@ body.lock {
   width: 98px;
 
   @media (min-width: 768px) {
-    bottom: -42px;
+    bottom: -23px;
     left: 2px;
     width: 200px;
   }
@@ -537,4 +537,3 @@ body.lock {
   color: $white-color;
   z-index: 100;
 }
-
